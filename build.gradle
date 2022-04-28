@@ -4,6 +4,13 @@ plugins {
     id 'com.android.library' version '7.1.2' apply false
 }
 
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url "https://jitpack.io" }  //Make sure to add this in your project for uCrop - an internal library
+    }
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

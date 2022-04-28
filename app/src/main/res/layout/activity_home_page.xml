@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8CCC6"
+    tools:context=".homePage">
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text=" Welcome To VIScan"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.072" />
+
+    <ImageView
+        android:id="@+id/myScanImage"
+        android:layout_width="215dp"
+        android:layout_height="202dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/appName"
+        app:srcCompat="@drawable/wine_scan" />
+
+    <TextView
+        android:id="@+id/myScan"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@id/myScanImage"
+        android:layout_below="@id/appName"
+        android:text="My Scan"
+        android:clickable="true"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+         />
+
+    <ImageView
+        android:id="@+id/myFavImage"
+        android:layout_width="215dp"
+        android:layout_height="202dp"
+        android:layout_below="@id/myScanImage"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/wine_love" />
+
+    <TextView
+        android:id="@+id/myFav"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myScan"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="220dp"
+        android:layout_toRightOf="@id/myFavImage"
+        android:text="My Favourite"
+        android:clickable="true"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/cameraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="74dp"
+        android:layout_below="@id/myFav"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="50dp"
+        android:clickable="true"
+        app:backgroundTint="#FA3333"
+        app:srcCompat="@drawable/ic_baseline_photo_camera_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/folderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="74dp"
+        android:layout_below="@id/myFavImage"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="38dp"
+        android:layout_toRightOf="@id/cameraButton"
+        android:clickable="true"
+        app:backgroundTint="#FA3333"
+        app:srcCompat="@drawable/ic_baseline_image_24" />
+
+
+</RelativeLayout>
