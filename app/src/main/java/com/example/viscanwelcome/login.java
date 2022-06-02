@@ -39,7 +39,8 @@ public class login extends AppCompatActivity {
 
     public void openHomePage()
     {
-        Intent intent = new Intent(this, homePage.class);
+     //   Intent intent = new Intent(this, homePage.class);
+        Intent intent = new Intent(this, ML.class);
         startActivity(intent);
     }
 }

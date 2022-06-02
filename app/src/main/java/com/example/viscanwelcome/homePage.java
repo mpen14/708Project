@@ -29,6 +29,8 @@ public class homePage extends AppCompatActivity {
 
     FloatingActionButton camera, folder;
     private static int req_code = 0;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
