@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "984068131579",
-    "project_id": "fcm-codelab-15386",
-    "storage_bucket": "fcm-codelab-15386.appspot.com"
+    "project_number": "724993795474",
+    "project_id": "viscanwelcome",
+    "storage_bucket": "viscanwelcome.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:984068131579:android:b6142dda0ff17becda3e5e",
+        "mobilesdk_app_id": "1:724993795474:android:5acad39e7bc5bab2cd4d4b",
         "android_client_info": {
-          "package_name": "com.example.android.eggtimernotifications"
+          "package_name": "com.example.viscanwelcome"
         }
       },
       "oauth_client": [
         {
-          "client_id": "984068131579-1hvos97ak89nllufokce2e94vsl9jgda.apps.googleusercontent.com",
+          "client_id": "724993795474-qpl7at8536bv3mro3rgstkprec33s9lv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDlW2IPC3Kt_TB9v2padV3BMP69U5pNLBE"
+          "current_key": "AIzaSyAffM7fT1Y3Y1-udxPU0SkzeLQGPr2sIyk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "984068131579-1hvos97ak89nllufokce2e94vsl9jgda.apps.googleusercontent.com",
+              "client_id": "724993795474-qpl7at8536bv3mro3rgstkprec33s9lv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
