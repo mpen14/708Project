@@ -47,12 +47,11 @@
         app:srcCompat="@drawable/ic_baseline_image_24" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="370sp"
         android:layout_height="370sp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/imageView"
-        android:layout_marginTop="80sp"
-        />
+        android:layout_marginTop="80sp" />
 
     <TextView
         android:id="@+id/classified"

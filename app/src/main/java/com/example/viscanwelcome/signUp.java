@@ -23,6 +23,7 @@ public class signUp extends AppCompatActivity {
     ProgressDialog progressDialog;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
 
     @Override
@@ -59,7 +60,18 @@ public class signUp extends AppCompatActivity {
     String pass = pwd.getText().toString();
     String cpass = cpwd.getText().toString();
 
-    if(!(pass.equals(cpass)))
+    if(!(email.matches(emailPattern)) || email.isEmpty()){
+            emailadd.setError("Enter correct email");
+        }
+    else if(pass.isEmpty())
+    {
+        pwd.setError("Password cannot be empty");
+    }
+    else if(cpass.isEmpty())
+    {
+        cpwd.setError("Password cannot be empty");
+    }
+    else if(!(pass.equals(cpass)))
     {
         cpwd.setError("Password does not match");
     }

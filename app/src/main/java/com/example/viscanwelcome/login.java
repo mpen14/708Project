@@ -24,6 +24,7 @@ public class login extends AppCompatActivity {
     ProgressDialog progressDialog;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,28 +49,34 @@ public class login extends AppCompatActivity {
     private void performLogin() {
         String email = emailadd.getText().toString();
         String pass = pwd.getText().toString();
+        if(!(email.matches(emailPattern)) || email.isEmpty()){
+            emailadd.setError("Enter correct email");
+        }
+        else if(pass.isEmpty())
+        {
+            pwd.setError("Password cannot be empty");
+        }
+        else {
+            progressDialog.setMessage("Login up");
+            progressDialog.setTitle("Login up");
+            progressDialog.setCanceledOnTouchOutside(false);
+            progressDialog.show();
 
-        progressDialog.setMessage("Login up");
-        progressDialog.setTitle("Login up");
-        progressDialog.setCanceledOnTouchOutside(false);
-        progressDialog.show();
+            mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
 
-        mAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful())
-                {
-                    progressDialog.dismiss();
-                    openHomePage();
-                    Toast.makeText(login.this,"Login Successful",Toast.LENGTH_SHORT);
+                    if (task.isSuccessful()) {
+                        progressDialog.dismiss();
+                        openHomePage();
+                        Toast.makeText(login.this, "Login Successful", Toast.LENGTH_SHORT);
+                    } else {
+                        progressDialog.dismiss();
+                        Toast.makeText(login.this, " " + task.getException(), Toast.LENGTH_SHORT);
+                    }
                 }
-                else
-                {
-                    progressDialog.dismiss();
-                    Toast.makeText(login.this," "+task.getException(),Toast.LENGTH_SHORT);
-                }
-            }
-        });
+            });
+        }
 
     }
 

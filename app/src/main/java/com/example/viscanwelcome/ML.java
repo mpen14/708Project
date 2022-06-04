@@ -74,13 +74,9 @@ public class ML extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
-                // Launch camera if we have permission
-//                    Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//                    someActivityResultLauncher.launch(cameraIntent);
                 Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-         //       gallery.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 someActivityResultLauncher.launch(gallery);
-                    req_code =1;
+                req_code =1;
 
             }
         });
